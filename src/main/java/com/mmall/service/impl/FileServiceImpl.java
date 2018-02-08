@@ -33,10 +33,10 @@ public class FileServiceImpl implements IFileService {
         try {
             file.transferTo(targetFile);
             //文件上传成功
-            //todo 将targetFile上传带ftp服务器上
+            //将targetFile上传带ftp服务器上
             FTPUtil.uploadFile(Lists.newArrayList(targetFile));
 
-            //todo 上传完成后，删除upload下面的文件
+            //上传完成后，删除upload下面的文件
             targetFile.delete();
 
         } catch (IOException e) {
